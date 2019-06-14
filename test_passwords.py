@@ -19,6 +19,13 @@ class TestUser(unittest.TestCase):
         self.assertEqual(self.new_user.last_name,'Max')
         self.assertEqual(self.new_user.password,'RAJIV12345')
 
+    def test_save_user(self):
+        """
+        Test to check if user description has been added onto the list
+        """
+        self.new_user.save_user()
+        self.assertEqual(len(User.user_list),1)
+
 
 if __name__ == "__main__":
     
