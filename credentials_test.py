@@ -18,11 +18,12 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(self.new_credentials.password,'RAJIV12345')
         self.assertEqual(self.new_credentials.credentials_name,'instagram')
         self.assertEqual(self.new_credentials.credentials_password,'KINYA12345')
-            
 
-
-
-
+    def test_save_credentials(self):
+        """
+        Tests that the user`s credentials have been added to the credentials list
+        """
+        self.new_credentials.save_credentials()
 
 if __name__ == "__main__":
     unittest.main()
