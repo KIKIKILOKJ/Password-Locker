@@ -1,3 +1,5 @@
+from random import choice
+import string
 class Credentials:
     """
     Class to create additional account information
@@ -24,7 +26,15 @@ class Credentials:
         """
         Credentials.credentials_list.append(self)
 
-    
+    @classmethod
+    def generate_password(cls):
+        """
+        Function that allows the application to generate a password for the user
+        """
+        size = 8#password should be 8 characters long
+        alphanum = string.ascii_uppercase + string.digits + string.ascii_lowercase#generate random alphabets and numbers
+        password = ''.join(choice(alphanum)for num in range(size))
+        return password
 
 
     
