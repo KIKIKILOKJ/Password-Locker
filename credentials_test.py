@@ -14,7 +14,11 @@ class TestCredentials(unittest.TestCase):
     def test__init__(self):
         """
         Test that checks if formulation of new credential instances is correctly done
-        """    
+        """
+        self.assertEqual(self.new_credentials.password,'RAJIV12345')
+        self.assertEqual(self.new_credentials.credentials_name,'instagram')
+        self.assertEqual(self.new_credentials.credentials_password,'KINYA12345')
+            
 
 
 
