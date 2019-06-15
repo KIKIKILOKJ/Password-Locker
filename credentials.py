@@ -48,6 +48,17 @@ class Credentials:
                 user_credentials_list.append(credentials)
         return user_credentials_list
 
-    
+    @classmethod
+    def credentials_exist(cls,name):
+        """
+        Method that checks if specific credentials exist
+        
+        Returns:
+            Boolean: True or False based on whether the credentials exist
+        """
+        for credentials in cls.credentials_list:
+            if credentials.credentials_name == name:
+                return True
+        return False
 
     
