@@ -44,7 +44,7 @@ class Credentials:
         user_credentials_list = []
 
         for credentials in cls.credentials_list:
-            if credentials.user_password == password:
+            if credentials.password == password:
                 user_credentials_list.append(credentials)
         return user_credentials_list
 

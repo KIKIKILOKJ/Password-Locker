@@ -11,6 +11,12 @@ class TestCredentials(unittest.TestCase):
         """
         self.new_credentials = Credentials('RAJIV12345','instagram','KINYA12345')
 
+    def tearDown(self):
+        """
+        Method destroys results of previous tests to provide room for new tests
+        """
+        Credentials.credentials_list = []
+
     def test__init__(self):
         """
         Test that checks if formulation of new credential instances is correctly done
@@ -39,7 +45,7 @@ class TestCredentials(unittest.TestCase):
         self.new_credentials.save_credentials()
         test_credentials = Credentials('RAJIV12345','instagram','KINYA12345')
         test_credentials.save_credentials
-        self.assertEqual(len(Credentials.display_credentials('RAJIV12345')),2)
+        self.assertEqual(len(Credentials.display_credentials('RAJIV12345')),1)
 
 if __name__ == "__main__":
     unittest.main()
