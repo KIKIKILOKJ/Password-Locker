@@ -7,7 +7,7 @@ class TestUser(unittest.TestCase):
     """
     def setUp(self):
         """
-        function that a new account before each test
+        function that creates a new account before each test
         """
         self.new_user = User('Peter','Max','RAJIV12345')
 
