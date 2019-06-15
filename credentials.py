@@ -35,3 +35,18 @@ class Credentials:
         alphanum = string.ascii_uppercase + string.digits + string.ascii_lowercase#generate random alphabets and numbers
         password = ''.join(choice(alphanum)for num in range(size))
         return password
+
+    @classmethod
+    def display_credentials(cls,password):
+        """
+        Method that shows the saved credentials
+        """
+        user_credentials_list = []
+
+        for credentials in cls.credentials_list:
+            if credentials.user_password == password:
+                user_credentials_list.append(credentials)
+        return user_credentials_list
+
+
+    
