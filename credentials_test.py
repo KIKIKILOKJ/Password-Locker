@@ -25,5 +25,13 @@ class TestCredentials(unittest.TestCase):
         """
         self.new_credentials.save_credentials()
 
+    def test_generate_password(self):
+        """
+        Tests if a password can be generated
+        """
+        generated_password = self.new_credentials.generate_password()
+        self.assertEqual(len(generated_password),8)
+
+
 if __name__ == "__main__":
     unittest.main()
