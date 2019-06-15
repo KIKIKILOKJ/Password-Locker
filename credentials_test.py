@@ -32,6 +32,14 @@ class TestCredentials(unittest.TestCase):
         generated_password = self.new_credentials.generate_password()
         self.assertEqual(len(generated_password),8)
 
+    def test_display_credentials(self):
+        """
+        Tests if once user has logged in then the credentials saved are listed.
+        """
+        self.new_credentials.save_credentials()
+        test_credentials = Credentials('RAJIV12345','instagram','KINYA12345')
+        test_credentials.save_credentials
+        self.assertEqual(len(Credentials.display_credentials('RAJIV12345')),2)
 
 if __name__ == "__main__":
     unittest.main()

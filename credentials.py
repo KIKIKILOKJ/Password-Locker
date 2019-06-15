@@ -35,6 +35,3 @@ class Credentials:
         alphanum = string.ascii_uppercase + string.digits + string.ascii_lowercase#generate random alphabets and numbers
         password = ''.join(choice(alphanum)for num in range(size))
         return password
-
-
-    
