@@ -35,3 +35,9 @@ def save_credentials(credentials):
     """
     credentials.save_credentials()
 
+def check_existing_credentials(credential_name):
+    """
+    Function that allows users to find their existing credentials
+    """
+    return Credentials.credentials_exist()
+    
