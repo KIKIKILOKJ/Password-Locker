@@ -1,3 +1,4 @@
+from credentials import Credentials
 class User:
     """
     Class that genrates new users in form of a list
@@ -39,3 +40,13 @@ class User:
         Method that shows a list of users saved
         """
         return cls.user_list
+
+    @classmethod
+    def log_in(cls,first_name,last_name,password):
+        """
+        Method that enables users to access their credentials
+        """
+        for user in cls.user_list:
+            if user.first_name == first_name and user.last_name == last_name and user.password == password:
+                return Credentials.credentials_list
+        return False

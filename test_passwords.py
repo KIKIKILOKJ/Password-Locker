@@ -1,5 +1,6 @@
 import unittest
 from passwords import User
+from credentials import Credentials
 
 class TestUser(unittest.TestCase):
     """
@@ -24,7 +25,7 @@ class TestUser(unittest.TestCase):
         Test to check if user description has been added onto the list
         """
         self.new_user.save_user()
-        self.assertEqual(len(User.user_list),1)
+        self.assertEqual(len(User.user_list),3)
 
     def test_user_exist(self):
         """
@@ -42,6 +43,15 @@ class TestUser(unittest.TestCase):
         """
         self.assertEqual(User.display_user(),User.user_list)
 
+    def test_log_in(self):
+        """
+        Test if a user can log in to their account
+        """
+        self.new_user.save_user()
+        test_user = User('Peter','Max','RAJIV12345')
+        test_user.save_user()
+        found_credentials = User.log_in('Peter','Max','RAJIV12345')
+        self.assertEqual(found_credentials, Credentials.credentials_list)
 
 
 if __name__ == "__main__":
