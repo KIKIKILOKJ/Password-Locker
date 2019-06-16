@@ -14,10 +14,3 @@ def save_user(user):
     """
     user.save_user()
 
-def user_log_in(first_name,password):
-    """
-    Function that enables the user to log into his account
-    """
-    log_in == User.log_in(first_name,password)
-    if log_in != False:
-        return User.log_in(first_name,password)

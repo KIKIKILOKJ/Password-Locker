@@ -22,5 +22,13 @@ class User:
         This method allows for new user to saved in a list
         """
         User.user_list.append(self)
-
     
+    @classmethod
+    def user_exist(cls,first_name):
+        """
+        Function that allows finding of an existing user
+        """
+        for user in cls.user_list:
+            if user.first_name == first_name:
+                return True
+        return False
