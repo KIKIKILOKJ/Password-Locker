@@ -84,3 +84,83 @@ def main():
             print("\n")
             print(f"{first_name,last_name}WELCOME TO THE PASSWORD LOCKER")
             print("\n")
+        
+        #elif short_code == 'dl':
+         #   """
+         #   dl = Display names of users saved
+         #   """
+         #   if display_user():
+         #       print("\n")
+          #      print("Here are the users of the application")
+          #      print("-"*10)
+          #      for user in user_list():
+          #          print(f"{user.first_name}")
+          #          print("-"*10)
+          #  else:
+           #     print("Password Locker has no available users.\n Be the first user:")
+        
+        elif short_code == 'li':
+            """
+            Users log in to their account
+            """
+            print("\n")
+            print("Log into your Account")
+            print("Enter the user name")
+            first_name = input()
+
+            print("Enter the password")
+            password = input()
+
+            if log_in(first_name,last_name,password) == None:
+                print("\n")
+                print("Please try again or create an account")
+                print("\n")
+            
+            else:
+                log_in(first_name,last_name,password)
+                print("\n")
+                print(f"{first_name} WELCOME TO YOUR CREDENTIALS\n Use the short codes")
+                
+                while True:
+                    print("Short codes: ac-Add credentials, dc-Display credentials, cg-Create credentials with a generated password, ex-Exit credentials")
+                    
+                    short_code = input().lower()
+                    if short_code == "ac":
+                        """
+                        Create Credentials
+                        """
+                        print("\n")
+                        print("New Credentials")
+                        print("-"*10)
+
+                        print("Name of the credentials ....")
+                        credentials_name = input()
+
+                        print("Password of the credentials ....")
+                        credentials_password = input()
+
+                        save_credentials(create_credentials(password,credentials_name,credentials_password))
+
+                        print(f"{credentials_name} have been created and saved")
+
+                    elif short_code == 'dc':
+                        '''
+                        Displaying credential name and password
+                        '''
+
+                        if display_credentials(credentials_password):
+                            print("\n")
+                            print(f"{first_name}\'s credentials")
+                            print("-"*10)
+
+                            for credential in display_credentials(credentials_password):
+                                print(f"Account ..... {credential.credential_name}")
+                                print(f"Password .... {credential.credential_password}")
+                                print("-"*10)
+
+                        else:
+                            print("\n")
+                            print("You have no credentials")
+                            print("\n")
+
+                   
