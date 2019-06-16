@@ -28,3 +28,10 @@ def create_credentials(password,credentials_name,credentials_password):
     """
     new_credentials = Credentials(password,credentials_name,credentials_password)
     return new_credentials
+
+def save_credentials(credentials):
+    """
+    Function that allows users to save their credentials
+    """
+    credentials.save_credentials()
+
