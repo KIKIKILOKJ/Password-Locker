@@ -21,3 +21,10 @@ def log_in(first_name,last_name,password):
     log_in == User.log_in(first_name,last_name,password)
     if log_in != False:
         return User.log_in(first_name,last_name,password)
+
+def create_credentials(password,credentials_name,credentials_password):
+    """
+    Fuction that allows useres to create their own credentials
+    """
+    new_credentials = Credentials(password,credentials_name,credentials_password)
+    return new_credentials
