@@ -177,7 +177,22 @@ def main():
 
                         save_credentials( Credentials(password, credentials_name,credentials_password (create_generated_password(credentials_name)) ) )
                         print("\n")
-                        print(f"Credentials for {credential_name} have been created and saved")
+                        print(f"Credentials for {credentials_name} have been created and saved")
                         print("\n")
+
+                    elif short_code == 'ex':
+                        print(f"See you later {first_name}")
+                        print("\n")
+                        break
+
+                    else:
+                        print("\n")
+                        print(f'''{short_code} does not compute.
+    Please use the short codes''')
+                        print("\n")
+
+if __name__ == '__main__':
+    main()
+
 
                    
