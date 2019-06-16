@@ -1,3 +1,4 @@
+#!/usr/bin/env python3.6
 from passwords import User
 from credentials import Credentials
 
