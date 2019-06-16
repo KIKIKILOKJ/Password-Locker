@@ -46,3 +46,10 @@ def display_credentials(credentials_password):
     Function that lists all the saved credentials
     """
     return Credentials.display_credentials(credentials_password)
+
+def create_generated_password(credentials_name):
+    """
+    Function that generates a suitable password for the user
+    """
+    credentials_password = Credentials.generate_password()
+    return credentials_password
