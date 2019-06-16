@@ -163,4 +163,21 @@ def main():
                             print("You have no credentials")
                             print("\n")
 
+                    elif short_code == 'cg':
+                        '''
+                        Creating a credentials with a generated password
+                        '''
+
+                        print("\n")
+                        print("New Credentials")
+                        print("-"*10)
+
+                        print("Name of the credentials ...")
+                        credentials_name = input()
+
+                        save_credentials( Credentials(password, credentials_name,credentials_password (create_generated_password(credentials_name)) ) )
+                        print("\n")
+                        print(f"Credentials for {credential_name} have been created and saved")
+                        print("\n")
+
                    
