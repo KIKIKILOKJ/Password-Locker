@@ -35,6 +35,12 @@ class TestUser(unittest.TestCase):
         test_user.save_user()
         user_exists = User.user_exist('Peter')
         self.assertTrue(user_exists)
+    
+    def test_display_user(self):
+        """
+        Tests if a list of users saved cn be shown
+        """
+        self.assertEqual(User.display_user(),User.user_list)
 
 
 
