@@ -22,3 +22,5 @@ class User:
         This method allows for new user to saved in a list
         """
         User.user_list.append(self)
+
+    
