@@ -53,3 +53,34 @@ def create_generated_password(credentials_name):
     """
     credentials_password = Credentials.generate_password()
     return credentials_password
+
+def main():
+    """
+    Function that allows the app to run and be operated from the terminal
+    """
+    print("HEY!! WELCOME TO YOUR SECURE PASSWORD LOCKER APP \n Use these short codes to achieve you iontentions with the app")
+    while True:
+        print("Short codes:ca-Create account, dl-Display names of users, li-Log into your account, ex-Exist account")
+        short_code = input().lower()
+        if short_code == "ca":
+            """
+            ca = Create new account
+            """
+            print("\n")
+            print("New Account")
+            print("-"*10)
+
+            print("First name ....")
+            first_name = input()
+
+            print("Last name ....")
+            last_name = input()
+
+            print("Password ....")
+            password = input()
+
+            save_user(create_user(first_name,last_name,password))
+
+            print("\n")
+            print(f"{first_name,last_name}WELCOME TO THE PASSWORD LOCKER")
+            print("\n")
