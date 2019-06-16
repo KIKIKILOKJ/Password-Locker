@@ -32,3 +32,10 @@ class User:
             if user.first_name == first_name:
                 return True
         return False
+
+    @classmethod
+    def display_user(cls):
+        """
+        Method that shows a list of users saved
+        """
+        return cls.user_list
