@@ -4,7 +4,7 @@
 This application was created by PETER KINYANJUI...
 
 ## Description
-THis application allows the user to create and save information concerning the accounts he has created for future references
+This application allows the user to create and save information concerning the accounts he has created for future references
 
 ## BDD
 |BEHAVIOUR|INPUT|OUTPUT|
@@ -16,9 +16,9 @@ THis application allows the user to create and save information concerning the a
 |Exit|"ex"|Exitfrom the application|
 
 ## Project set up
--Git clone(https://github.com/KIKIKILOKJ/Password-Locker)
--From the terminal run chmod +x run.py
--$ ./run.py
+-Git clone(https://github.com/KIKIKILOKJ/Password-Locker).
+-From the terminal run chmod +x run.py.
+-$ ./run.py.
 
 ## Contact Info
 Incase of any challenges, feel free to contact me through email(petermax2004@gmail.com)
